@@ -71,9 +71,6 @@
     background: red;
     color: white;
 }
-.nav-dropdown{
-    display: none;
-}
 /*media queries*/
 @media(max-width:1280px){
     .navbar{
@@ -126,15 +123,7 @@
         
     }
 }
-@media (max-width:800px){
-    .navbar{
-        padding: 10px 0px;
-    }
-    .nav-dropdown{
 
-
-    }
-}
 
 
 
