@@ -32,6 +32,7 @@ const upload=multer({storage:storage})
 //Creatin upload endpoint for images
 app.use('/images',express.static('upload/images'))
 
+//upload new images to the images folder
 app.post("/upload",upload.single('product'),(req,res)=>{
     res.json({
         success:1,
@@ -41,6 +42,7 @@ app.post("/upload",upload.single('product'),(req,res)=>{
 
 
 // Schema for creating products
+//use to store data of products
 const Product = mongoose.model("Product",{
     id:{
         type:Number,
@@ -118,6 +120,7 @@ app.post('/removeproduct',async(req,res)=>{
 })
 
 //Creating API for getting all products
+//displays all products list in an array
 app.get('/allproducts',async (req,res)=>{
     let products = await Product.find({});
     console.log("All Products Fetch")
